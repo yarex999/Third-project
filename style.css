@@ -175,42 +175,6 @@ body {
       display: block;
   }
   
-  /*Responsive Styles*/
-  
-  @media screen and (max-width : 800px){
-    .mobile-menu{
-        display: block;
-    }
-    .mobile-menu .lines {
-      border-bottom: 15px double #28377e; 
-      border-top: 5px solid #28377e; 
-      content:"";
-      height: 5px; 
-      width:20px;
-      padding-right:15px;
-    float: right;
-    display: block;
-    
-  }
-      /*Make dropdown links appear inline*/
-      .mobile-menu ul {
-          position: static;
-          display: none;
-          margin: 10% auto;
-      }
-      /*Create vertical spacing*/
-      .mobile-menu li {
-          margin-bottom: 1px;
-      }
-      /*Make all menu links full width*/
-      .mobile-menu ul li, .mobile-menu li a {
-          width: 100%;
-      }
-      /*Display 'show menu' link*/
-      .mobile-menu .show-menu {
-          display:block;
-      }
-  }
 
 
 
@@ -1747,9 +1711,47 @@ input[type="submit"]{
           padding-right: 3%;
           padding-left: 3%;
       }
+
+
+       /*menu*/
+    .mobile-menu{
+        display: block;
+    }
+    .mobile-menu .lines {
+      border-bottom: 15px double #28377e; 
+      border-top: 5px solid #28377e; 
+      content:"";
+      height: 5px; 
+      width:20px;
+      padding-right:15px;
+    float: right;
+    display: block;
+    
+  }
+      /*Make dropdown links appear inline*/
+      .mobile-menu ul {
+          position: static;
+          display: none;
+          margin: 10% auto;
+      }
+      /*Create vertical spacing*/
+      .mobile-menu li {
+          margin-bottom: 1px;
+      }
+      /*Make all menu links full width*/
+      .mobile-menu ul li, .mobile-menu li a {
+          width: 100%;
+      }
+      /*Display 'show menu' link*/
+      .mobile-menu .show-menu {
+          display:block;
+      }
       .menu_links {
           display: none;
       }
+
+
+
       .menu_button {
           display:block;
       }
@@ -1768,6 +1770,9 @@ input[type="submit"]{
 
 
   @media (max-width: 1100px) {
+
+
+   
     /*2 page*/
     .content_page2{
         flex-wrap: wrap;
@@ -2031,13 +2036,13 @@ input[type="submit"]{
         font-size: 15px;
     }
     input[type="text"], input[type="tel"]{
-        padding: 10% 0;
+        padding: 5% 0;
     }
     textarea{
         padding: 6% 0;
     }
     ::-webkit-input-placeholder {
-        font-size: 25px;
+        font-size: 15px;
     }
     /*footer*/
     .icon9 {
