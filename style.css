@@ -59,6 +59,7 @@ body {
     position: absolute;
     top: 30px;
     right: 0px;
+    left: 0px;
     z-index: 999;
 
 }
