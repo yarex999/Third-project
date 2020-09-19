@@ -11,6 +11,7 @@ body {
 
 .page {
     overflow: hidden;
+    position: relative;
 }
 
 /*HEADER*/
@@ -43,6 +44,7 @@ body {
     animation-direction: alternate-reverse;
     display: flex;
     align-items: center;
+    z-index: 99999;
 
 }
 
@@ -53,18 +55,164 @@ body {
     75%{color:#f2622c;}
     100%{color:#d46035;}
 }
+.m_menu{
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    z-index: 999;
 
-.menu_button {
-    display: none;
-    color: #28377e;
-    animation-name: color;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-    text-decoration: none;
-    font-size: 45px;
-    
 }
+.mobile-menu {
+    display:none;
+    width:100%;
+  background: #fff;
+  line-height: 1.6em;
+  font-weight: 400;
+  text-align:center;
+  position: relative;
+  margin:0 auto;
+
+  }
+  /*Strip the ul of padding and list styling*/
+  .mobile-menu ul {
+      list-style-type:none;
+    margin: 0 auto;
+    padding-left:0;
+    text-align:center;
+    width:100%;
+    position: absolute;
+    background: #fff;
+  }
+  
+  /*Create a horizontal list with spacing*/
+  .mobile-menu li {
+      display:inline-block;
+      /*float: left;
+      margin-right: 1px;*/
+  }
+  
+  /*Style for menu links*/
+  .mobile-menu li a {
+      display:block;
+      min-width:140px;
+      text-align: center;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #0c1234;
+      font-weight: 700;
+    text-transform:uppercase;
+      background: #fff;
+      text-decoration: none;
+    padding: 10px 0;  
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  }
+  
+  /*Hover state for top level links*/
+  .mobile-menu li:hover a {
+      color: #204f87;
+    background-color:#d46035;
+  }
+  
+  /*Style for dropdown links*/
+  .mobile-menu li:hover ul a {
+      background: #d46035;
+      color: #fff;
+      font-weight: 700;
+      height: 40px;
+      line-height: 40px;
+  }
+  
+  /*Hover state for dropdown links*/
+  .mobile-menu li:hover .mobile-menu ul a:hover {
+      color: #28377e;
+  }
+  
+  /*Hide dropdown links until they are needed*/
+  .mobile-menu li ul {
+      display: none;
+    
+  }
+  
+  /*Make dropdown links vertical*/
+  .mobile-menu li ul li {
+      display: block;
+      float: none;
+  }
+  
+  /*Prevent text wrapping*/
+  .mobile-menu li ul li a {
+      width: auto;
+      min-width: 100px;
+      padding: 0 20px;
+  }
+  
+  
+  /*Style 'show menu' label button and hide it by default*/
+  .mobile-menu .show-menu {
+      text-decoration: none;
+      text-align: center;
+      padding: 10px 15px;
+      display: none;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .mobile-menu .show-menu span{
+     padding-left: 25px;
+  }
+  
+  /*Hide checkbox*/
+  .mobile-menu input[type=checkbox]{
+      display: none;
+  }
+  
+  /*Show menu when invisible checkbox is checked*/
+  .mobile-menu input[type=checkbox]:checked ~ #menu{
+      display: block;
+  }
+  
+  /*Responsive Styles*/
+  
+  @media screen and (max-width : 800px){
+    .mobile-menu{
+        display: block;
+    }
+    .mobile-menu .lines {
+      border-bottom: 15px double #28377e; 
+      border-top: 5px solid #28377e; 
+      content:"";
+      height: 5px; 
+      width:20px;
+      padding-right:15px;
+    float: right;
+    display: block;
+    
+  }
+      /*Make dropdown links appear inline*/
+      .mobile-menu ul {
+          position: static;
+          display: none;
+          margin: 10% auto;
+      }
+      /*Create vertical spacing*/
+      .mobile-menu li {
+          margin-bottom: 1px;
+      }
+      /*Make all menu links full width*/
+      .mobile-menu ul li, .mobile-menu li a {
+          width: 100%;
+      }
+      /*Display 'show menu' link*/
+      .mobile-menu .show-menu {
+          display:block;
+      }
+  }
+
+
+
 
 .menu_links {
     display: flex;
@@ -221,6 +369,7 @@ a.main-item:active {
     position: relative;
     display: flex;
       justify-content: center;
+      z-index: 1;
    
    
 }
@@ -1626,6 +1775,12 @@ input[type="submit"]{
     .cards_page3{
         flex-wrap: wrap;
     }
+
+    .arrow_page3_3, .arrow_page3_2 ,.arrow_page3 {
+        visibility: visible;
+        bottom: 25%;
+
+    }
    
     .img-page3_shape1 {
         position: absolute;
@@ -1644,6 +1799,10 @@ input[type="submit"]{
         width: 100%;
         margin: 0 auto 5%;
         padding: 0 15%;
+    }
+    .photo_text2{
+        bottom: 5%;
+        visibility: visible;
     }
 
   
@@ -1683,6 +1842,9 @@ input[type="submit"]{
     /*8 page*/
     .content_page8_3{
         padding: 1% 10%;
+    }
+    .content_page8_inner{
+        width: 90%;
     }
     input[type="text"], input[type="tel"] {
         width: 100%;
@@ -1742,6 +1904,14 @@ input[type="submit"]{
     .page_four{
         height: 2350px;
     }
+
+    /*5 page*/
+    .header5{
+        font-size: 50px;
+    }
+    .page_five{
+        min-height: auto;
+    }
  
     /*7 page*/ 
     .content_page7{
@@ -1779,6 +1949,14 @@ input[type="submit"]{
         padding: 0;
     }
     
+    input[type="submit"]{
+        margin-top: 4%;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    ::-webkit-input-placeholder {
+        font-size: 10px;
+    }
 
     /*9 page*/
     .content9{
@@ -1845,7 +2023,8 @@ input[type="submit"]{
 	left: 40%;
 	}
     .page_eight {
-        height: 1850px;
+        height: auto;
+        padding-bottom: 10% ;
     }
     .email_link{
         font-size: 15px;
