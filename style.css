@@ -334,7 +334,7 @@ a.main-item:active {
     position: relative;
     display: flex;
       justify-content: center;
-      z-index: 1;
+      z-index: -1;
    
    
 }
@@ -1732,7 +1732,7 @@ input[type="submit"]{
       .mobile-menu ul {
           position: static;
           display: none;
-          margin: 10% auto;
+          padding: 15% 0 ;
       }
       /*Create vertical spacing*/
       .mobile-menu li {
@@ -1889,7 +1889,7 @@ input[type="submit"]{
         left: 25%;
     }
     .text1_page2, .text2_page2 {
-        font-size: 25px;
+        font-size: 20px;
         width: 100%;
         
     }
@@ -1991,6 +1991,17 @@ input[type="submit"]{
 
 @media(max-width: 480px){
     /*1 page*/
+    .minor_header{
+        padding: 3vh 3%;
+    }
+    .mobile-menu .show-menu {
+        padding: 0 15px;
+    }
+  
+    .m_menu{
+        top: 25px;
+
+    }
     .content_page1{
         font-size: 52px;
     }
@@ -2006,6 +2017,15 @@ input[type="submit"]{
     /*4 page*/
     .link_page4{
         font-size: 25px;
+    }
+    .header_page4 {
+        font-size: 25px;
+    }
+    .text_page4{
+        font-size: 15px;
+    }
+    a.link_page4 {
+        font-size: 20px;
     }
 	/*6 page*/
 	.header_page6:before {
@@ -2036,10 +2056,12 @@ input[type="submit"]{
         font-size: 15px;
     }
     input[type="text"], input[type="tel"]{
-        padding: 5% 0;
+        padding: 7% 0;
+        margin: 2%;
     }
     textarea{
-        padding: 6% 0;
+        padding: 5% 0;
+        margin: 2%;
     }
     ::-webkit-input-placeholder {
         font-size: 15px;
